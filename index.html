@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعوة زفاف - Helana & Safwat</title>
+    <title>دعوة زفاف - هيلانا وصفوت</title>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -20,7 +20,7 @@
         }
         .card {
             background: #ffffff;
-            padding: 40px 25px;
+            padding: 30px 20px;
             border-radius: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             max-width: 420px;
@@ -31,6 +31,14 @@
             font-size: 1.8rem;
             color: #b89758;
             margin-bottom: 5px;
+        }
+        .couple-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 18px;
+            margin: 15px 0;
+            border: 2px solid #e8e0d5;
         }
         h1 {
             font-family: 'Amiri', serif;
@@ -43,7 +51,7 @@
             font-size: 1.15rem;
             color: #666;
             font-style: italic;
-            margin: 15px 0 25px 0;
+            margin: 10px 0 20px 0;
             line-height: 1.6;
         }
         .names {
@@ -51,7 +59,7 @@
             font-size: 2.2rem;
             color: #2c3e50;
             font-weight: bold;
-            margin: 20px 0;
+            margin: 15px 0;
             letter-spacing: 1px;
         }
         .and-symbol {
@@ -63,15 +71,24 @@
             padding: 20px 15px;
             border-radius: 15px;
             border: 1px dashed #d4c4ab;
-            margin-top: 25px;
+            margin-top: 20px;
         }
         .details p {
             margin: 10px 0;
             font-size: 1.05rem;
         }
+        .audio-player {
+            margin: 15px 0;
+            width: 100%;
+        }
+        audio {
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+        }
         .btn-map {
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 15px;
             padding: 14px 28px;
             background-color: #b89758;
             color: #ffffff;
@@ -80,10 +97,6 @@
             font-weight: bold;
             font-size: 1.05rem;
             box-shadow: 0 4px 15px rgba(184, 151, 88, 0.35);
-            transition: background-color 0.3s;
-        }
-        .btn-map:hover {
-            background-color: #a08246;
         }
     </style>
 </head>
@@ -91,7 +104,18 @@
     <div class="card">
         <div class="cross">☦</div>
         <h1>دعوة إكليل</h1>
-        <p class="verse">"فَالَّذِي جَمَعَهُ اللهُ لاَ يُفَرِّقُهُ إِنْسَانٌ"<br><small>(متى 19: 6)</small></p>
+        <p class="verse">«أَنَا عَرَّفْتُهُمُ اسْمَكَ وَسَأُعَرِّفُهُمْ، لِيَكُونَ فِيهِمُ الْحُبُّ الَّذِي أَحْبَبْتَنِي بِهِ، وَأَكُونُ أَنَا فِيهِمْ»<br><small>(يوحنا 17 : 26)</small></p>
+
+        <!-- مشغل الموسيقى برابط مباشر -->
+        <div class="audio-player">
+            <audio controls autoplay loop>
+                <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=wedding-march-112186.mp3" type="audio/mpeg">
+                متصفحك لا يدعم تشغيل الصوت.
+            </audio>
+        </div>
+
+        <!-- صورة الدعوة المرفوعة -->
+        <img src="file_00000000147c81f5a60da395c280d8f3" alt="Helana & Safwat" class="couple-img">
         
         <p>يتشرفون بدعوتكم لحضور حفل الزفاف المبارك</p>
         
@@ -109,4 +133,5 @@
     </div>
 </body>
 </html>
+
 
