@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعوة زفاف - هيلانا وصفوت</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>دعوة زفاف - صفوت وهيلانا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Cairo', sans-serif;
@@ -23,8 +24,8 @@
             padding: 30px 20px;
             border-radius: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            max-width: 420px;
-            width: 88%;
+            max-width: 440px;
+            width: 90%;
             border: 1px solid #e8e0d5;
         }
         .cross {
@@ -32,19 +33,11 @@
             color: #b89758;
             margin-bottom: 5px;
         }
-        .couple-img {
-            width: 100%;
-            max-height: 350px;
-            object-fit: cover;
-            border-radius: 18px;
-            margin: 15px 0;
-            border: 2px solid #e8e0d5;
-        }
         h1 {
             font-family: 'Amiri', serif;
             color: #b89758;
             font-size: 2.2rem;
-            margin: 10px 0;
+            margin: 5px 0 10px 0;
         }
         .verse {
             font-family: 'Amiri', serif;
@@ -53,6 +46,23 @@
             font-style: italic;
             margin: 10px 0 20px 0;
             line-height: 1.6;
+        }
+        .audio-player {
+            margin: 15px 0;
+            width: 100%;
+        }
+        audio {
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+        }
+        .couple-img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 18px;
+            margin: 15px 0;
+            border: 2px solid #e8e0d5;
         }
         .names {
             font-family: 'Amiri', serif;
@@ -68,28 +78,99 @@
         }
         .details {
             background-color: #fcf8f2;
-            padding: 20px 15px;
+            padding: 15px;
             border-radius: 15px;
             border: 1px dashed #d4c4ab;
             margin-top: 20px;
         }
         .details p {
-            margin: 10px 0;
+            margin: 8px 0;
             font-size: 1.05rem;
         }
-        .audio-player {
-            margin: 15px 0;
-            width: 100%;
+        .countdown-title {
+            font-weight: bold;
+            color: #b89758;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
-        audio {
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            background: #2c3e50;
+            color: #fff;
+            padding: 12px 5px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .time-box {
+            flex: 1;
+        }
+        .time-box span {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #d4c4ab;
+        }
+        .time-box label {
+            font-size: 0.75rem;
+        }
+        .guestbook {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #e8e0d5;
+            text-align: right;
+        }
+        .guestbook h3 {
+            text-align: center;
+            color: #b89758;
+            font-family: 'Amiri', serif;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+        .guestbook input, .guestbook textarea {
             width: 100%;
-            height: 40px;
-            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        .guestbook button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+        }
+        .wishes-list {
+            margin-top: 15px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .wish-item {
+            background: #fdfaf6;
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border-right: 4px solid #b89758;
+            font-size: 0.95rem;
+        }
+        .wish-name {
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 3px;
         }
         .btn-map {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 14px 28px;
+            display: block;
+            margin-top: 20px;
+            padding: 14px 20px;
             background-color: #b89758;
             color: #ffffff;
             text-decoration: none;
@@ -97,6 +178,7 @@
             font-weight: bold;
             font-size: 1.05rem;
             box-shadow: 0 4px 15px rgba(184, 151, 88, 0.35);
+            text-align: center;
         }
     </style>
 </head>
@@ -106,7 +188,7 @@
         <h1>دعوة إكليل</h1>
         <p class="verse">«أَنَا عَرَّفْتُهُمُ اسْمَكَ وَسَأُعَرِّفُهُمْ، لِيَكُونَ فِيهِمُ الْحُبُّ الَّذِي أَحْبَبْتَنِي بِهِ، وَأَكُونُ أَنَا فِيهِمْ»<br><small>(يوحنا 17 : 26)</small></p>
 
-        <!-- مشغل الموسيقى برابط مباشر -->
+        <!-- مشغل الموسيقى المباشر -->
         <div class="audio-player">
             <audio controls autoplay loop>
                 <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=wedding-march-112186.mp3" type="audio/mpeg">
@@ -114,8 +196,8 @@
             </audio>
         </div>
 
-        <!-- صورة الدعوة المرفوعة -->
-        <img src="file_00000000147c81f5a60da395c280d8f3" alt="Helana & Safwat" class="couple-img">
+        <!-- صورة العروسين المرفوعة مباشرة من المستودع -->
+        <img src="https://raw.githubusercontent.com/helanazaki7-cmyk/wedding-invitation/main/file_00000000147c81f5a60da395c280d8f3" alt="Safwat & Helana" class="couple-img">
         
         <p>يتشرفون بدعوتكم لحضور حفل الزفاف المبارك</p>
         
@@ -129,8 +211,76 @@
             <p>📍 <strong>المكان:</strong> كنيسة الشهيد العظيم أبوسيفين بفيديمين</p>
         </div>
 
+        <div class="countdown-title">⏳ المتبقي على يومنا المبارك:</div>
+        <div class="countdown">
+            <div class="time-box"><span id="days">0</span><label>يوم</label></div>
+            <div class="time-box"><span id="hours">0</span><label>ساعة</label></div>
+            <div class="time-box"><span id="minutes">0</span><label>دقيقة</label></div>
+            <div class="time-box"><span id="seconds">0</span><label>ثانية</label></div>
+        </div>
+
         <a href="https://maps.app.goo.gl/sQea8WUtUdKar1aP8" target="_blank" class="btn-map">🗺️ موقع الكنيسة على الخريطة</a>
+
+        <!-- دفتر الأمنيات والتبريكات -->
+        <div class="guestbook">
+            <h3>💌 دفتر التهاني والأمنيات</h3>
+            <input type="text" id="guestName" placeholder="اسمك الكريم...">
+            <textarea id="guestMessage" rows="3" placeholder="اكتب أمنيتك أو تهنئتك للعروسين..."></textarea>
+            <button onclick="addWish()">إرسال التهنئة ✨</button>
+
+            <div class="wishes-list" id="wishesList">
+                <div class="wish-item">
+                    <span class="wish-name">أسرة الكنيسة</span>
+                    ألف مبروك للعروسين صفوت وهيلانا، بالرفاه والبنين وحياة مباركة! 💍✨
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // العداد التنازلي
+        const weddingDate = new Date("Jan 23, 2027 19:00:00").getTime();
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.querySelector(".countdown").innerHTML = "🎉 أهلاً بكم في يوم زفافنا! 🎉";
+            }
+        }, 1000);
+
+        // إضافة التهاني في دفتر الأمنيات
+        function addWish() {
+            const name = document.getElementById("guestName").value.trim();
+            const message = document.getElementById("guestMessage").value.trim();
+
+            if (name === "" || message === "") {
+                alert("برجاء كتابة الاسم والتهنئة أولاً!");
+                return;
+            }
+
+            const wishesList = document.getElementById("wishesList");
+            const newWish = document.createElement("div");
+            newWish.className = "wish-item";
+            newWish.innerHTML = `<span class="wish-name">${name}</span>${message}`;
+
+            wishesList.insertBefore(newWish, wishesList.firstChild);
+
+            document.getElementById("guestName").value = "";
+            document.getElementById("guestMessage").value = "";
+        }
+    </script>
 </body>
 </html>
 
